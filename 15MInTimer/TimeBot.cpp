@@ -8,11 +8,14 @@ int main()
 	char Restart = 'n';
 	string name;
 	srand(static_cast<unsigned int>(time(0))); // seed the random generator
+
 	//default time for the time class
 	unsigned int DEFAULTTIMEHRS = 0;
 	unsigned int DEFAULTTIMEMINS = 15;
 	unsigned int DEFAULTTIMESECS = 59;
-	Timer timer; //creates an object
+
+	Timer timer; //instantiate a timer object
+
 	string Messages[3]; // an array with with 3 messages
 	int numMessages = 0;
 	Messages[numMessages++] = "starting to look like a potato. you should take a break and stand up";
@@ -123,8 +126,10 @@ int main()
 				cout << "*******************\n";
 				Sleep(1000); //Makes the program wait a second
 				system("cls");
+
 				//takes way every time a second goes by
 				timer.setTime(3, (TimeSecs - 1));
+
 				//takes away a minute everytime a minute goes by
 				if (timer.getTime(3) == 0 && timer.getTime(2) != 0)
 				{
@@ -142,6 +147,7 @@ int main()
 
 			//picks a random messages from the message array
 			cout << name << "\n" << Messages[rand() % 2];
+
 			//asks the user if they want to restart
 			cout << "\n\nWould you like to restart?: (y) yes or (n) no:  ";
 			cin >> Restart;
