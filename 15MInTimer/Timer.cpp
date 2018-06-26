@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Timer.h"
 
+//function that sets the hours, minutes and seconds
 void Timer::setTime(int customTimeUnit, unsigned int customTime)
 {
 	if (customTimeUnit == 1)
@@ -18,6 +19,7 @@ void Timer::setTime(int customTimeUnit, unsigned int customTime)
 		timeSeconds = customTime;
 	}
 }
+//gets the Hours, minutes and Seconds
 unsigned int Timer::getTime(int unitOfTime)
 {
 	if (unitOfTime == 1)

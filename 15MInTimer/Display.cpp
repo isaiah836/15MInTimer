@@ -22,23 +22,3 @@ string usersName(string question)
 	}
 	return userName;
 }
-
-
-//if the user wants a custom time then this functions grabs the time they want timebots alarm to go off
-void ChooseTime(unsigned int& customHours, unsigned int& customMinutes, unsigned int& customSeconds)
-{
-	Timer settime;
-	cout << "How many hours do you want?: ";
-	cin >> customHours;
-	settime.setTime(1, customHours);
-
-	cout << "How many minutes do you want?: ";
-	cin >> customMinutes;
-	settime.setTime(2, customMinutes);
-
-	cout << "How many second do you want?: ";
-	cin >> customSeconds;
-	settime.setTime(3, customSeconds);
-
-	return;
-}
